@@ -1,28 +1,28 @@
 const data = [
   {
-    path: '/',
-    label: 'Michael D\'Angelo',
+    path: "/",
+    label: "Tom Balough",
     index: true,
   },
   {
-    path: '/about',
-    label: 'About',
+    path: "/about",
+    label: "About",
   },
   {
-    path: '/resume',
-    label: 'Resume',
+    path: "/resume",
+    label: "Resume",
   },
   {
-    path: '/projects',
-    label: 'Projects',
+    path: "/projects",
+    label: "Projects",
   },
   {
-    path: '/stats',
-    label: 'Stats',
+    path: "/stats",
+    label: "Stats",
   },
   {
-    path: '/contact',
-    label: 'Contact',
+    path: "/contact",
+    label: "Contact",
   },
 ];
 
