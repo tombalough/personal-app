@@ -1,34 +1,36 @@
 const randomString = (length) => {
   const x = 36 ** (length + 1);
   const y = 36 ** length;
-  return Math.round(x - (Math.random() * y)).toString(36).slice(1);
+  return Math.round(x - Math.random() * y)
+    .toString(36)
+    .slice(1);
 };
 
 const pages = [
   {
-    route: '/',
-    title: 'Michael D\'Angelo',
-    heading: 'ABOUT THIS SITE',
+    route: "/",
+    title: "Tom Balough",
+    heading: "ABOUT THIS SITE",
   },
   {
-    route: '/about',
-    title: 'About | Michael D\'Angelo',
-    heading: 'ABOUT ME',
+    route: "/about",
+    title: "About | Tom Balough",
+    heading: "ABOUT ME",
   },
   {
-    route: '/projects',
-    title: 'Projects | Michael D\'Angelo',
-    heading: 'PROJECTS',
+    route: "/projects",
+    title: "Projects | Tom Balough",
+    heading: "PROJECTS",
   },
   {
-    route: '/stats',
-    title: 'Stats | Michael D\'Angelo',
-    heading: 'STATS',
+    route: "/stats",
+    title: "Stats | Tom Balough",
+    heading: "STATS",
   },
   {
-    route: '/contact',
-    title: 'Contact | Michael D\'Angelo',
-    heading: 'CONTACT',
+    route: "/contact",
+    title: "Contact | Tom Balough",
+    heading: "CONTACT",
   },
 ];
 
