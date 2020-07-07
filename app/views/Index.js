@@ -17,8 +17,8 @@ const Index = () => (
       <p>
         {" "}
         Welcome to my website. I'll be using this site to play around with web
-        technologies, publish data science explorations, and track exercise and
-        reading.
+        technologies, publish data science explorations, and track
+        exercise/reading.
       </p>
       <p> </p>
     </article>
