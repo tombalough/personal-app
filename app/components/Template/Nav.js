@@ -21,7 +21,11 @@ const Nav = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>todo</p>
+      <p>
+        Hi, I'm Tom. I co-founded Raven Black where we develop data
+        infrastructure and ML for defense applications. In my spare time, I like
+        to dabble in web development and data science.
+      </p>
       {/*       <ul className="actions">
         <li>
           {window.location.pathname !== `${BASE_PATH}` ? (

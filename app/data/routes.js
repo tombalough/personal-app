@@ -4,10 +4,10 @@ const data = [
     label: "Tom Balough",
     index: true,
   },
-  {
+  /*   {
     path: "/about",
     label: "About",
-  },
+  }, */
   /*   {
     path: "/resume",
     label: "Resume",
