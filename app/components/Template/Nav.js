@@ -22,10 +22,10 @@ const Nav = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>todo</p>
-      <ul className="actions">
+      {/*       <ul className="actions">
         <li>
-          {window.location.pathname !== `${BASE_PATH}/resume` ? (
-            <Link to="/resume" className="button">
+          {window.location.pathname !== `${BASE_PATH}` ? (
+            <Link to="/about" className="button">
               Learn More
             </Link>
           ) : (
@@ -34,7 +34,7 @@ const Nav = () => (
             </Link>
           )}
         </li>
-      </ul>
+      </ul> */}
     </section>
 
     <section id="footer">
@@ -47,9 +47,6 @@ const Nav = () => (
           </li>
         ))}
       </ul>
-      <p className="copyright">
-        &copy; todo <Link to="/">mldangelo.com</Link>.
-      </p>
     </section>
   </section>
 );

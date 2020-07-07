@@ -8,7 +8,7 @@ const data = [
     path: "/about",
     label: "About",
   },
-  {
+  /*   {
     path: "/resume",
     label: "Resume",
   },
@@ -23,7 +23,7 @@ const data = [
   {
     path: "/contact",
     label: "Contact",
-  },
+  }, */
 ];
 
 export default data;
