@@ -9,7 +9,6 @@ const Index = () => (
       <header>
         <div className="title">
           <h2>About this site</h2>
-          <p></p>
         </div>
       </header>
       <p>
