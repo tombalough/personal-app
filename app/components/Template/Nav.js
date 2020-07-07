@@ -24,7 +24,7 @@ const Nav = () => (
       <p>
         Hi, I'm Tom. I co-founded Raven Black where we develop data
         infrastructure and ML for defense applications. In my spare time, I like
-        to dabble in web development and data science.
+        to dabble in web development and data science.{" "}
       </p>
       {/*       <ul className="actions">
         <li>
@@ -40,7 +40,6 @@ const Nav = () => (
         </li>
       </ul> */}
     </section>
-
     <section id="footer">
       <ul className="icons">
         {data.map((s) => (
