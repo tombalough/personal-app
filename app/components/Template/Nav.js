@@ -22,7 +22,7 @@ const Nav = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I'm Tom. I co-founded Raven Black where we develop data
+        Hi, I'm Tom. I'm a co-founder at Raven Black where we're developing data
         infrastructure and ML for defense applications. In my spare time, I like
         to dabble in web development and data science.{" "}
       </p>
