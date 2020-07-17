@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Featured
 import Changelog from "./views/Changelog";
+import Books from "./views/Books";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import Index from "./views/Index";
@@ -19,6 +20,7 @@ ReactDOM.render(
   <Router basename={BASE_PATH}>
     <Switch>
       <Route exact path="/" component={Index} />
+      <Route path="/books" component={Books} />
       <Route path="/changelog" component={Changelog} />
       <Route path="/about" component={About} />
       <Route path="/projects" component={Projects} />

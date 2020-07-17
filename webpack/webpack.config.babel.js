@@ -10,7 +10,7 @@ export default {
   devtool: "eval-source-map",
   mode: "development",
   entry: [
-    "webpack-hot-middleware/client?path=//localhost:7999/__webpack_hmr&reload=true",
+    "webpack-hot-middleware/client?path=//localhost:8000/__webpack_hmr&reload=true",
     path.join(__dirname, "../app/entry.js"),
   ],
   output: {

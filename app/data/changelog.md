@@ -1,3 +1,10 @@
+### 17 July 2020
+
+- Noticed that goodreads has an API. Decided to work on a feature that serves my reading list and reviews
+- Investigated the goodreads API and set up the scaffolding for the books feature
+
+---
+
 ### 11 July 2020
 
 - Provisioned SSL/TLS certificates with Certificate Manager

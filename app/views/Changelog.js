@@ -24,8 +24,6 @@ const Changelog = () => (
           <h2>
             <Link to="/changelog">Changelog</Link>
           </h2>
-          {/*           <p>(in about {count} words)</p>
-           */}
           <div>
             <p>Notes on progress, technologies, challenges, etc</p>
           </div>
