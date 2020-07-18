@@ -21,6 +21,7 @@ export default {
       BASE_PATH: JSON.stringify(basePath),
       NODE_ENV: JSON.stringify(process.env.NODE_ENV || "production"),
       GA_ID: JSON.stringify(process.env.GA_ID || ""),
+      GR_KEY: JSON.stringify(process.env.GR_KEY),
     }),
     new HtmlWebpackPlugin({
       template: "server/views/index.html",
