@@ -67,7 +67,9 @@
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

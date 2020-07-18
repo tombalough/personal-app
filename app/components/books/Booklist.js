@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import xml2js from "xml2js";
 
 const url =
   "https://cors-anywhere.herokuapp.com/" +
   "https://www.goodreads.com/review/list/108291935.xml?key=" +
   GR_KEY +
-  "&v=2&shelf=read&sort=date_read&per_page=200";
+  "&v=2&shelf=read&sort=date_read&per_page=10";
 
 const Booklist = (props) => {
   const [bookData, setBookData] = useState({});
@@ -27,13 +28,11 @@ const Booklist = (props) => {
   //the DOMParser.parseFromString() method.
   var xmlDocument = domParser.parseFromString(bookData, "text/xml");
 
-  var title = xmlDocument.getElementsByTagName("review")[0];
-  var title2 = xmlDocument.getElementsByTagName("title");
-
-  //Log it to the console
-  console.log(xmlDocument);
-  console.log(title);
-  console.log(title2);
+  var parseString = require("xml2js").parseString;
+  parseString(bookData, function (err, result) {
+    console.log(typeof result);
+    console.log(result);
+  });
 
   return (
     <div>
