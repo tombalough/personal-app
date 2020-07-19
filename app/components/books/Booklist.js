@@ -5,7 +5,7 @@ const url =
   "https://cors-anywhere.herokuapp.com/" +
   "https://www.goodreads.com/review/list/108291935.xml?key=" +
   GR_KEY +
-  "&v=2&shelf=read&sort=date_read&per_page=2";
+  "&v=2&shelf=read&sort=date_read&per_page=5";
 
 var parseString = require("xml2js").parseString;
 var convert = require("xml-js");
@@ -37,19 +37,20 @@ export default class Booklist2 extends React.Component {
     //console.log(this.state.bookData.getElementsByTagName("GoodreadsResponse"));
     var parser = new DOMParser(),
       xmlDocument = parser.parseFromString(this.state.bookData, "text/xml");
-    console.log(xmlDocument.getElementsByTagName("title")[0].innerHTML);
-    console.log(xmlDocument.getElementsByTagName("reviews")[0]);
-    console.log(xmlDocument.getElementsByTagName("name")[0]);
-    let title = xmlDocument.getElementsByTagName("title")[0].innerHTML;
-    let author = xmlDocument.getElementsByTagName("name")[0].innerHTML;
-    let read = xmlDocument.getElementsByTagName("read_at")[0].innerHTML;
-    let review = xmlDocument.getElementsByTagName("body")[0].innerHTML;
-    let rating = xmlDocument.getElementsByTagName("rating")[0].innerHTML;
+    let length = xmlDocument.getElementsByTagName("review").length - 1;
+    console.log(xmlDocument.getElementsByTagName("review"));
+    console.log(length);
+    let title = xmlDocument.getElementsByTagName("title")[length].innerHTML;
+    let author = xmlDocument.getElementsByTagName("name")[length].innerHTML;
+    let read = xmlDocument.getElementsByTagName("read_at")[length].innerHTML;
+    let review = xmlDocument.getElementsByTagName("body")[length].innerHTML;
+    let rating = xmlDocument.getElementsByTagName("rating")[length].innerHTML;
     //read_at
     //body
     //rating
     return (
       <div>
+        <h2>{length}</h2>
         <h2>{title}</h2>
         <h2>{author}</h2>
         <h2>{read}</h2>
