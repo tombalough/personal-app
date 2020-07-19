@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import React from "react";
 import xml2js from "xml2js";
 
 const url =
@@ -9,53 +8,64 @@ const url =
   "&v=2&shelf=read&sort=date_read&per_page=2";
 
 var parseString = require("xml2js").parseString;
+var convert = require("xml-js");
 
-const Booklist = (props) => {
-  const [bookData, setBookData] = useState({});
+export default class Booklist2 extends React.Component {
+  state = { loading: true };
 
-  /*   async function booklist2() {
-    let extractedData = "";
-    const response = await Axios.get(url);
-    setBookData(response.data);
-    parseString(bookData, function (err, result) {
-      if (err) {
-        console.log("ERROR " + err);
-        return;
-      }
-      extractedData = JSON.parse(JSON.stringify(result));
-    });
-    console.log(typeof extractedData);
-    console.log(extractedData);
+  componentDidMount() {
+    fetch(url)
+      .then((response) => response.text())
+      .then(
+        (bookData) => this.setState({ loading: false, bookData }),
+        (error) => this.setState({ loading: false, error })
+      );
   }
- */
 
-  fetch(
-    `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/108291935.xml?key=0NOgToyDTBI3wOZX2gAg&v=2&shelf=read&sort=date_read&per_page=2`
-  )
-    .then((res) => res.text())
-    .then((body) => {
-      xml2js.parseString(body, function (err, res) {
-        if (err) console.log(err);
-        let bookList3 = res.GoodreadsResponse.reviews[0].review;
-        console.log(typeof res);
-        console.log(typeof body);
-        console.log(
-          res.GoodreadsResponse.reviews[0].review[0].book[0].title[0]
-        );
-        console.log(bookList3[0].book[0].title[0]);
-      });
-    });
+  renderLoading() {
+    return <div>Loading...</div>;
+  }
 
-  //booklist2();
-  /*  useEffect(() => {
-    booklist2();
-  }, []); */
+  renderError() {
+    return <div>I'm sorry! Please try again.</div>;
+  }
 
-  return (
-    <div>
-      <h1>Test Test Test</h1>
-    </div>
-  );
-};
+  renderBookData() {
+    //console.log(this.state);
+    //console.log(this.state.bookData);
+    //console.log(typeof this.state.bookData);
+    //console.log(this.state.bookData.getElementsByTagName("GoodreadsResponse"));
+    var parser = new DOMParser(),
+      xmlDocument = parser.parseFromString(this.state.bookData, "text/xml");
+    console.log(xmlDocument.getElementsByTagName("title")[0].innerHTML);
+    console.log(xmlDocument.getElementsByTagName("reviews")[0]);
+    console.log(xmlDocument.getElementsByTagName("name")[0]);
+    let title = xmlDocument.getElementsByTagName("title")[0].innerHTML;
+    let author = xmlDocument.getElementsByTagName("name")[0].innerHTML;
+    let read = xmlDocument.getElementsByTagName("read_at")[0].innerHTML;
+    let review = xmlDocument.getElementsByTagName("body")[0].innerHTML;
+    let rating = xmlDocument.getElementsByTagName("rating")[0].innerHTML;
+    //read_at
+    //body
+    //rating
+    return (
+      <div>
+        <h2>{title}</h2>
+        <h2>{author}</h2>
+        <h2>{read}</h2>
+        <h2>{review}</h2>
+        <h2>{rating}</h2>
+      </div>
+    );
+  }
 
-export default Booklist;
+  render() {
+    if (this.state.loading) {
+      return this.renderLoading();
+    } else if (this.state.bookData) {
+      return this.renderBookData();
+    } else {
+      return this.renderError();
+    }
+  }
+}
