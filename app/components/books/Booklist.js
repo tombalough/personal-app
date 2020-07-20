@@ -119,7 +119,11 @@ export default class Booklist extends React.Component {
           }}
           detailPanel={(bookReviews) => {
             return (
-              <div>
+              <div
+                style={{
+                  backgroundColor: "white",
+                }}
+              >
                 <h1>Review</h1>
                 <div>
                   {
