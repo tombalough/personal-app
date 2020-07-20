@@ -89,6 +89,15 @@ export default class Booklist extends React.Component {
       };
     }
 
+    for (let i = 0; i <= length; i++) {
+      bookReviews[i]["review"] = bookReviews[i]["review"]
+        .replace("<![CDATA[", "")
+        .replace("]]>", "")
+        .replace("<br />", "  ");
+    }
+
+    console.log(bookReviews[0]["review"]);
+
     return (
       <div>
         <MaterialTable
