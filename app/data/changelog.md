@@ -1,3 +1,18 @@
+### 19 July 2020
+
+- Created book review component with data from the Goodreads API
+- Goodreads returns XML, so spent a bit of time parsing the response correctly
+- Used Material for the table component; may change that in the future as the table styling seemed to be limited
+
+---
+
+### 17 July 2020
+
+- Noticed that goodreads has an API. Decided to work on a feature that serves my reading list and reviews
+- Investigated the goodreads API and set up the scaffolding for the books feature
+
+---
+
 ### 11 July 2020
 
 - Provisioned SSL/TLS certificates with Certificate Manager

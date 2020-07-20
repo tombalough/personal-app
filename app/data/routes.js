@@ -5,22 +5,26 @@ const data = [
     index: true,
   },
   {
+    path: "/books",
+    label: "Books",
+  },
+  {
     path: "/changelog",
     label: "Changelog",
   },
-  /*   {
+  /*       {
     path: "/resume",
     label: "Resume",
-  },
-  {
+  }, */
+  /*   {
     path: "/projects",
     label: "Projects",
-  },
-  {
+  }, */
+  /*   {
     path: "/stats",
     label: "Stats",
-  },
-  {
+  }, */
+  /*   {
     path: "/contact",
     label: "Contact",
   }, */

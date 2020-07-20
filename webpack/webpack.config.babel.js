@@ -10,7 +10,7 @@ export default {
   devtool: "eval-source-map",
   mode: "development",
   entry: [
-    "webpack-hot-middleware/client?path=//localhost:7999/__webpack_hmr&reload=true",
+    "webpack-hot-middleware/client?path=//localhost:8000/__webpack_hmr&reload=true",
     path.join(__dirname, "../app/entry.js"),
   ],
   output: {
@@ -23,6 +23,7 @@ export default {
       BASE_PATH: JSON.stringify(basePath),
       NODE_ENV: JSON.stringify(process.env.NODE_ENV || "development"),
       GA_ID: JSON.stringify(process.env.GA_ID || ""),
+      GR_KEY: JSON.stringify(process.env.GR_KEY),
     }),
     new HtmlWebpackPlugin({
       template: "server/views/index.html",
@@ -72,5 +73,11 @@ export default {
         loader: "file-loader",
       },
     ],
+  },
+  node: {
+    console: true,
+    fs: "empty",
+    net: "empty",
+    tls: "empty",
   },
 };
