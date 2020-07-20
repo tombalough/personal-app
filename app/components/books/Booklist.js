@@ -61,7 +61,11 @@ export default class Booklist extends React.Component {
   }
 
   renderLoading() {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   renderError() {
@@ -89,26 +93,56 @@ export default class Booklist extends React.Component {
       <div>
         <MaterialTable
           icons={tableIcons}
-          title="Book Reviews"
+          title="Book Reviews "
           columns={[
-            { title: "Title", field: "title" },
-            { title: "Author", field: "author" },
-            { title: "Date", field: "date" },
-            { title: "Stars", field: "rating" },
+            {
+              title: "Title",
+              field: "title",
+              width: 20,
+            },
+            {
+              title: "Author",
+              field: "author",
+              width: 15,
+              padding: "2px",
+            },
+            { title: "Date", field: "date", width: 6 },
+            { title: "Stars", field: "rating", width: 1 },
           ]}
           data={bookReviews}
-          /*           detailPanel={rowData => {
+          options={{
+            headerStyle: {
+              backgroundColor: "#DEDEDF",
+              color: "#000000",
+            },
+            padding: "dense",
+          }}
+          detailPanel={(bookReviews) => {
             return (
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/C0DPdy98e4c"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            )
-          }} */
+              <div>
+                <h1>Review</h1>
+                <div>
+                  {
+                    //Check if message failed
+                    bookReviews.review.length > 4 ? (
+                      <div>
+                        {" "}
+                        <p>{bookReviews.review}</p>{" "}
+                      </div>
+                    ) : (
+                      <div>
+                        {" "}
+                        <p>
+                          Sorry, I haven't written a review for this one yet.
+                        </p>{" "}
+                      </div>
+                    )
+                  }
+                </div>
+              </div>
+            );
+          }}
+          onRowClick={(event, bookReviews, togglePanel) => togglePanel()}
         />
       </div>
     );
