@@ -1,3 +1,9 @@
+### 13 August 2019
+
+- Cleaned up the book review table
+
+
+---
 ### 19 July 2020
 
 - Created book review component with data from the Goodreads API

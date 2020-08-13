@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import Main from "../layouts/Main";
 
+import MapChart from "../components/Map/MapChart.js";
+
 const Index = () => (
   <Main>
     <article className="post" id="index">
@@ -18,6 +20,7 @@ const Index = () => (
         <a href="https://github.com/tombalough/personal-app">here</a>.
       </p>
       <p> </p>
+      <MapChart />
     </article>
   </Main>
 );
