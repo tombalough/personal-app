@@ -1,3 +1,12 @@
+### 13 August 2019
+
+- Cleaned up the book review table
+- Created map component using React Simple Maps
+- Added some info to the About section
+- Deployed updated app to CloudFront
+
+---
+
 ### 19 July 2020
 
 - Created book review component with data from the Goodreads API
