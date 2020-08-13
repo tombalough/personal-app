@@ -15,8 +15,8 @@ const Index = () => (
       </header>
       <p style={{ marginBottom: "0px" }}>
         {" "}
-        Hi, I'm Tom. I'll be using this site to explore web technologies and
-        publish side projects. Source{" "}
+        Thanks for visiting my site. I'll be using this to explore web
+        technologies and publish side projects. Source{" "}
         <a href="https://github.com/tombalough/personal-app">here</a>.
       </p>
       <MapChart />
