@@ -1,7 +1,12 @@
 // About page (/about)
 
-#about {
-  p {
-    margin: auto;
+#books {
+  .review-body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .review-title {
+    padding-left: 15px;
+    padding-top: 15px;
   }
 }

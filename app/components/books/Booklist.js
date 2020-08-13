@@ -93,7 +93,7 @@ export default class Booklist extends React.Component {
       bookReviews[i]["review"] = bookReviews[i]["review"]
         .replace("<![CDATA[", "")
         .replace("]]>", "")
-        .replace("<br />", "  ");
+        .replace(new RegExp("<br />", "g"), " ");
     }
 
     console.log(bookReviews[0]["review"]);
@@ -133,19 +133,19 @@ export default class Booklist extends React.Component {
                   backgroundColor: "white",
                 }}
               >
-                <h1>Review</h1>
+                <h1 className="review-title">Review</h1>
                 <div>
                   {
                     //Check if message failed
                     bookReviews.review.length > 4 ? (
                       <div>
                         {" "}
-                        <p>{bookReviews.review}</p>{" "}
+                        <p className="review-body">{bookReviews.review}</p>{" "}
                       </div>
                     ) : (
                       <div>
                         {" "}
-                        <p>
+                        <p className="review-body">
                           Sorry, I haven't written a review for this one yet.
                         </p>{" "}
                       </div>
