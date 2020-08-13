@@ -13,17 +13,16 @@ const geoUrl =
 
 const MapChart = () => {
   return (
-    <ComposableMap height="430" projectionConfig={{ scale: 146 }}>
-      <ZoomableGroup center={[0, 7]} zoom={1}>
-        <Sphere stroke="#e3e3e3" strokeWidth={1} />
-
+    <ComposableMap height={430} projectionConfig={{ scale: 146 }}>
+      <ZoomableGroup center={[0, 3]} zoom={1}>
+        <Sphere fill="#ededed" stroke="#cccccc" strokeWidth={1} />
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
             geographies.map((geo) => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill="#cccccc"
+                fill="#ffffff"
                 stroke="#b5b5b5"
                 strokeWidth="1"
               />

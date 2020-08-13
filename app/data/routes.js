@@ -5,6 +5,10 @@ const data = [
     index: true,
   },
   {
+    path: "/about",
+    label: "About",
+  },
+  {
     path: "/books",
     label: "Books",
   },

@@ -10,16 +10,15 @@ const Index = () => (
     <article className="post" id="index">
       <header>
         <div className="title">
-          <h2>About</h2>
+          <h2>Welcome</h2>
         </div>
       </header>
-      <p>
+      <p style={{ marginBottom: "0px" }}>
         {" "}
-        Welcome to my website. I'll be using this site to explore web
-        technologies and publish side projects. Source{" "}
+        Hi, I'm Tom. I'll be using this site to explore web technologies and
+        publish side projects. Source{" "}
         <a href="https://github.com/tombalough/personal-app">here</a>.
       </p>
-      <p> </p>
       <MapChart />
     </article>
   </Main>
