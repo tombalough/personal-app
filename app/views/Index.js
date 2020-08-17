@@ -19,6 +19,7 @@ const Index = () => (
         technologies and publish side projects. Source{" "}
         <a href="https://github.com/tombalough/personal-app">here</a>.
       </p>
+      <hr />
       <MapChart />
     </article>
   </Main>

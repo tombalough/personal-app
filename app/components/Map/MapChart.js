@@ -13,17 +13,21 @@ const geoUrl =
 
 const MapChart = () => {
   return (
-    <ComposableMap height={430} projectionConfig={{ scale: 146 }}>
-      <Sphere fill="#ededed" stroke="#cccccc" strokeWidth={1} />
+    <ComposableMap
+      height={430}
+      projectionConfig={{ scale: 120 }}
+      projection="geoConicEqualArea"
+    >
+      <Sphere fill="#ECEFF1" stroke="#ECEFF1" strokeWidth={1} />
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map((geo) => (
             <Geography
               key={geo.rsmKey}
               geography={geo}
-              fill="#ffffff"
-              stroke="#b5b5b5"
-              strokeWidth="1"
+              fill="#cccccc"
+              stroke="#ffffff"
+              strokeWidth="0.37"
             />
           ))
         }
@@ -70,7 +74,7 @@ const MapChart = () => {
       </Annotation>
       <Annotation
         subject={[-76, 44]}
-        dx={20}
+        dx={0}
         dy={-32}
         connectorProps={{
           stroke: "#7a7a7a",
@@ -79,8 +83,9 @@ const MapChart = () => {
         }}
       >
         <text
-          x="4"
-          textAnchor="start"
+          x="0"
+          y="-5"
+          textAnchor="middle"
           alignmentBaseline="middle"
           fill="#000000"
           fontSize="13"
@@ -91,7 +96,7 @@ const MapChart = () => {
       <Annotation
         subject={[-74, 42]}
         dx={20}
-        dy={-18}
+        dy={-22}
         connectorProps={{
           stroke: "#7a7a7a",
           strokeWidth: 1,
@@ -131,7 +136,7 @@ const MapChart = () => {
       <Annotation
         subject={[-75, 40]}
         dx={20}
-        dy={10}
+        dy={13}
         connectorProps={{
           stroke: "#7a7a7a",
           strokeWidth: 1,
@@ -150,8 +155,8 @@ const MapChart = () => {
       </Annotation>
       <Annotation
         subject={[-77, 38.7]}
-        dx={20}
-        dy={25}
+        dx={5}
+        dy={30}
         connectorProps={{
           stroke: "#7a7a7a",
           strokeWidth: 1,
@@ -170,8 +175,8 @@ const MapChart = () => {
       </Annotation>
       <Annotation
         subject={[-84, 32]}
-        dx={20}
-        dy={25}
+        dx={0}
+        dy={32}
         connectorProps={{
           stroke: "#7a7a7a",
           strokeWidth: 1,
@@ -179,8 +184,9 @@ const MapChart = () => {
         }}
       >
         <text
-          x="4"
-          textAnchor="start"
+          x="0"
+          y="5"
+          textAnchor="middle"
           alignmentBaseline="middle"
           fill="#000000"
           fontSize="13"
