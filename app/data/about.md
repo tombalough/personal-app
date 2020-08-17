@@ -26,6 +26,6 @@
 #### Interests
 
 - I enjoy outdoor sports - surfing, trail running, alpine mountaineering, etc. I've recently become fascinated with Sprinter van conversions; planning to do a custom build at some point in the future.
-- I'm a serious SF Giants and LA Lakers fan. I'd love to work in an analytics heavy front office in professional sports.
+- I'm a huge SF Giants and LA Lakers fan. I'd love to work in an analytics heavy front office in professional sports.
 
 ---

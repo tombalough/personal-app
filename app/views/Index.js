@@ -19,7 +19,24 @@ const Index = () => (
         technologies and publish side projects. Source{" "}
         <a href="https://github.com/tombalough/personal-app">here</a>.
       </p>
+      <hr />
       <MapChart />
+      <p style={{ marginBottom: "0px" }}>
+        {" "}
+        A few of the places I've lived on an{" "}
+        <a href="https://en.wikipedia.org/wiki/Albers_projection">
+          Albers equal-area projection.
+        </a>{" "}
+        Generally, our mental model of geographic area is inaccurate due to
+        distortion of the default{" "}
+        <a href="https://en.wikipedia.org/wiki/Mercator_projection">
+          Mercator projection.
+        </a>{" "}
+        Take a look <a href="https://thetruesize.com/">this tool</a> to get a
+        better feel for true geographic area. Also, check out{" "}
+        <a href="https://www.youtube.com/watch?v=vVX-PrBRtTY">this clip</a> from
+        The West Wing.
+      </p>
     </article>
   </Main>
 );
