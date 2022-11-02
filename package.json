@@ -45,7 +45,7 @@
     "html-minify-loader": "^1.4.0",
     "html-webpack-plugin": "^4.3.0",
     "loaders.css": "^0.1.2",
-    "material-table": "^1.66.0",
+    "material-table": "^1.69.3",
     "mini-css-extract-plugin": "^0.9.0",
     "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
